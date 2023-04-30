@@ -11,6 +11,7 @@ import (
 type LoggerCfg struct {
 	BackendType     BackendType         `json:"backendType"`
 	TerminalBackend *TerminalBackendCfg `json:"terminalBackend,omitempty"`
+	JSONBackend     *JSONBackendCfg     `json:"jsonBackend,omitempty"`
 	DebugLevel      int                 `json:"debugLevel"`
 }
 
@@ -55,6 +56,13 @@ func NewLogger(name string, cfg LoggerCfg) (*Logger, error) {
 		}
 
 		backend = NewTerminalBackend(*cfg.TerminalBackend)
+
+	case BackendTypeJSON:
+		if cfg.JSONBackend == nil {
+			return nil, fmt.Errorf("missing json backend configuration")
+		}
+
+		backend = NewJSONBackend(*cfg.JSONBackend)
 
 	case "":
 		return nil, fmt.Errorf("missing or empty backend type")

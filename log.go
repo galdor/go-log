@@ -1,6 +1,9 @@
 package log
 
-import "time"
+import (
+	"strconv"
+	"time"
+)
 
 type Level string
 
@@ -18,6 +21,16 @@ type Message struct {
 	Data       Data
 
 	domain string
+}
+
+func (msg Message) FullLevel() string {
+	level := string(msg.Level)
+
+	if msg.Level == LevelDebug {
+		level += "." + strconv.Itoa(msg.DebugLevel)
+	}
+
+	return level
 }
 
 type Datum interface{}
