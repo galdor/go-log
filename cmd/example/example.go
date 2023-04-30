@@ -53,4 +53,7 @@ func mainCmd(p *program.Program) {
 	logger.InfoData(log.Data{"a": 42, "b": "hello"},
 		"an info message with additional data")
 	logger.Error("an error message")
+
+	childLogger := logger.Child("child", log.Data{"x": "y"})
+	childLogger.Info("an info message by the child")
 }
