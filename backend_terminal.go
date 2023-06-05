@@ -24,8 +24,8 @@ var (
 
 type TerminalBackendCfg struct {
 	Color       bool `json:"color"`
-	ForceColor  bool `json:"forceColor"`
-	DomainWidth int  `json:"domainWidth"`
+	ForceColor  bool `json:"force_color"`
+	DomainWidth int  `json:"domain_width"`
 }
 
 type TerminalBackend struct {

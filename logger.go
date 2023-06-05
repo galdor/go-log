@@ -9,10 +9,10 @@ import (
 )
 
 type LoggerCfg struct {
-	BackendType     BackendType         `json:"backendType"`
-	TerminalBackend *TerminalBackendCfg `json:"terminalBackend,omitempty"`
-	JSONBackend     *JSONBackendCfg     `json:"jsonBackend,omitempty"`
-	DebugLevel      int                 `json:"debugLevel"`
+	BackendType     BackendType         `json:"backend_type"`
+	TerminalBackend *TerminalBackendCfg `json:"terminal_backend,omitempty"`
+	JSONBackend     *JSONBackendCfg     `json:"json_backend,omitempty"`
+	DebugLevel      int                 `json:"debug_level"`
 }
 
 type Logger struct {
