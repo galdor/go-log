@@ -9,7 +9,7 @@ import (
 
 const (
 	DefaultTimestampKey    = "time"
-	DefaultTimestampLayout = time.RFC3339
+	DefaultTimestampLayout = time.RFC3339Nano
 	DefaultDomainKey       = "domain"
 	DefaultLevelKey        = "level"
 	DefaultMessageKey      = "msg"
