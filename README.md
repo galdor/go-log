@@ -20,12 +20,12 @@ Go-log currently supports the following backends:
 - `json`: write log messages encoded as JSON objects to the standard error
   output.
 
-Refer to the [Go package
-documentation](https://pkg.go.dev/github.com/galdor/go-log) for information
-about the API, and see the [`example`](cmd/example/example.go) program.
+Refer to the [Go package documentation](https://pkg.go.dev/go.n16f.net/log) for
+information about the API, and see the [`example`](cmd/example/example.go)
+program.
 
-The [go-service](https://github.com/galdor/go-service) library demonstrates
-how to use go-log loggers for larger programs.
+The [go-service](https://go.n16f.net/service) library demonstrates how to use
+go-log loggers for larger programs.
 
 # Licensing
 Go-log is open source software distributed under the

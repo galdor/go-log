@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/galdor/go-log"
-	"github.com/galdor/go-program"
+	"go.n16f.net/log"
+	"go.n16f.net/program"
 )
 
 func main() {
