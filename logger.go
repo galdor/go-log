@@ -12,7 +12,7 @@ type LoggerCfg struct {
 	BackendType     BackendType         `json:"backend_type"`
 	TerminalBackend *TerminalBackendCfg `json:"terminal_backend,omitempty"`
 	JSONBackend     *JSONBackendCfg     `json:"json_backend,omitempty"`
-	DebugLevel      int                 `json:"debug_level"`
+	DebugLevel      int                 `json:"debug_level,omitempty"`
 }
 
 type Logger struct {

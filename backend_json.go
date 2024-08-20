@@ -17,12 +17,12 @@ const (
 )
 
 type JSONBackendCfg struct {
-	TimestampKey    string
-	TimestampLayout string
-	DomainKey       string
-	LevelKey        string
-	MessageKey      string
-	DataKey         string
+	TimestampKey    string `json:"timestamp_key,omitempty"`
+	TimestampLayout string `json:"timestamp_layout,omitempty"`
+	DomainKey       string `json:"domain_key,omitempty"`
+	LevelKey        string `json:"level_key,omitempty"`
+	MessageKey      string `json:"message_key,omitempty"`
+	DataKey         string `json:"data_key,omitempty"`
 }
 
 type JSONBackend struct {
