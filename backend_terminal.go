@@ -35,7 +35,7 @@ type TerminalBackend struct {
 }
 
 func NewTerminalBackend(cfg TerminalBackendCfg) *TerminalBackend {
-	domainWidth := 24
+	domainWidth := 32
 	if cfg.DomainWidth > 0 {
 		domainWidth = cfg.DomainWidth
 	}
