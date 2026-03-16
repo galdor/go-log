@@ -13,6 +13,7 @@ type LoggerCfg struct {
 	TerminalBackend *TerminalBackendCfg `json:"terminal_backend,omitempty"`
 	JSONBackend     *JSONBackendCfg     `json:"json_backend,omitempty"`
 	DebugLevel      int                 `json:"debug_level,omitempty"`
+	Data            Data                `json:"data,omitempty"`
 }
 
 type Logger struct {
@@ -39,11 +40,16 @@ func DefaultLogger(name string) *Logger {
 }
 
 func NewLogger(name string, cfg LoggerCfg) (*Logger, error) {
+	data := cfg.Data
+	if data == nil {
+		data = Data{}
+	}
+
 	l := &Logger{
 		Cfg: cfg,
 
 		Domain:     name,
-		Data:       Data{},
+		Data:       data,
 		DebugLevel: cfg.DebugLevel,
 	}
 
