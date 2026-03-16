@@ -71,7 +71,7 @@ func (b *JSONBackend) Log(msg Message) {
 	data, err := json.Marshal(obj)
 	if err != nil {
 		// Not much we can do here
-		fmt.Fprintf(os.Stderr, "cannot encode log message %#v: %w\n", obj, err)
+		fmt.Fprintf(os.Stderr, "cannot encode log message %#v: %v\n", obj, err)
 		return
 	}
 
